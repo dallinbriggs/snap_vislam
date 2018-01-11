@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <node pkg="vrpn_client_ros" type="vrpn_client_node" name="optitrack" output="screen">
+    <param name="refresh_tracker_frequency" type="double" value="1.0" />
+    <param name="server" value="192.168.0.103"/>
+    <!-- <param name="trackers" type="string" value="sparrow" /> -->
+  </node>
+
+  <node name="snap_vislam" pkg="snap_ros_examples" type="snap_vislam_node"/>
+
+</launch>
